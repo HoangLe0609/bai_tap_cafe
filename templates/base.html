@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %} - Sông Hương</title>
+    {% block styles %}
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 20px; }
+        nav { background: #333; padding: 10px; margin-bottom: 20px; }
+        nav a { color: #fff; margin-right: 15px; text-decoration: none; font-weight: bold; }
+        footer { margin-top: 30px; border-top: 1px solid #ccc; padding-top: 10px; text-align: center; }
+        .pagination { margin-top: 20px; display: flex; gap: 8px; align-items: center; }
+        .pagination a, .pagination span { padding: 5px 10px; text-decoration: none; border: 1px solid #ccc; border-radius: 4px; }
+        .pagination .active { font-weight: bold; background-color: #eee; border-color: #999; }
+    </style>
+    {% endblock %}
+</head>
+<body>
+    <!-- Nhúng Navbar -->
+    {% include '_navbar.html' %}
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- Nhúng Footer -->
+    {% include '_footer.html' %}
+</body>
+</html>

@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% from '_macros.html' import item_card, pagination %}
+
+{% block title %}Thực đơn{% endblock %}
+
+{% block content %}
+    <h1>Thực đơn quán</h1>
+    
+    <div class="menu-list">
+        {% for item in menu %}
+            <!-- Gọi macro item_card -->
+            {{ item_card(item) }}
+        {% endfor %}
+    </div>
+
+    <!-- Gọi macro pagination -->
+    {{ pagination(page, pages, 'menu') }}
+{% endblock %}

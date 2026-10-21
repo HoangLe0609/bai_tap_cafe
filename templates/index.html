@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block title %}Trang chủ{% endblock %}
+
+{% block content %}
+    <h1>Chào mừng đến với {{ shop.name }}</h1>
+    <p>Địa chỉ: {{ shop.address }}</p>
+    <p>Hãy xem <a href="/menu">Thực đơn</a> của chúng tôi!</p>
+{% endblock %}
